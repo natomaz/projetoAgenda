@@ -1,0 +1,15 @@
+===Base de Dados bdpoo
+
+== Estrutura da tabela tbagenda
+
+|------
+|Coluna|Tipo|Nulo|Predefinido
+|------
+|//**id**//|int(11)|Não|
+|nome|varchar(80)|Não|
+|email|varchar(200)|Não|
+|senha|varchar(80)|Não|
+|telefone|varchar(15)|Não|
+|recado|varchar(250)|Não|
+== Extraindo dados da tabela tbagenda
+
