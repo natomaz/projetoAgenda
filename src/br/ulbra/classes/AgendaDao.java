@@ -30,7 +30,7 @@ public class AgendaDao {
         try {
             stmt = con.prepareStatement("SELECT * FROM tbagenda where email = ? AND senha = ?");
             stmt.setString(1, email);
-            stmt.setString(2, cripto.toString());
+            stmt.setString(2, senha);
             rs = stmt.executeQuery();
 
             if (rs.next()) {

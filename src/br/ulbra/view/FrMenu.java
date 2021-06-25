@@ -1,5 +1,9 @@
 package br.ulbra.view;
 
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class FrMenu extends javax.swing.JFrame {
 
     public FrMenu() {
@@ -89,11 +93,15 @@ public class FrMenu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        new FrCadastro().setVisible(true);
+        try {
+            new FrCadastro().setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(FrMenu.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
-        
+    System.exit(0);     
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     public static void main(String args[]) {

@@ -145,6 +145,11 @@ public class FrCadastro extends javax.swing.JFrame {
                 "ID", "NOME", "SENHA", "EMAIL", "TELEFONE", "RECADO"
             }
         ));
+        tbAgenda.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tbAgendaMouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(tbAgenda);
 
         jLabel8.setFont(new java.awt.Font("Arial Black", 0, 24)); // NOI18N
@@ -400,6 +405,23 @@ public class FrCadastro extends javax.swing.JFrame {
             Logger.getLogger(FrCadastro.class.getName()).log(Level.SEVERE, null, ex);
         }  
     }//GEN-LAST:event_btnPesquisarActionPerformed
+
+    private void tbAgendaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbAgendaMouseClicked
+       if (tbAgenda.getSelectedRow() != -1) {
+            txtID.setText(tbAgenda.getValueAt(tbAgenda.getSelectedRow(), 0)
+                    .toString());
+            txtNome.setText(tbAgenda.getValueAt(tbAgenda.getSelectedRow(), 1)
+                    .toString());
+            txtEmail.setText(tbAgenda.getValueAt(tbAgenda.getSelectedRow(), 2)
+                    .toString());
+            txtSenha.setText(tbAgenda.getValueAt(tbAgenda.getSelectedRow(), 3)
+                    .toString());
+            txtTelefone.setText(tbAgenda.getValueAt(tbAgenda.getSelectedRow(), 4)
+                    .toString());
+            txtRecado.setText(tbAgenda.getValueAt(tbAgenda.getSelectedRow(), 4)
+                    .toString());
+        }
+    }//GEN-LAST:event_tbAgendaMouseClicked
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
